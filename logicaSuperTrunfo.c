@@ -307,9 +307,7 @@ int main() {
     printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapita);
     printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacional);
 
-
-
-
+    
 
 
     // Definição das variáveis para armazenar as propriedades das cidades
