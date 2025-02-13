@@ -10,12 +10,14 @@ int main() {
 
     char Estado;
     char Codigo[10];   
-    char Cidade[50];
-    int Populacao;
-    float Area;
-    float PIB;
-    int PontosTuristicos;
-    float PIBPercapita, DensidadePopulacional;
+    char CidadeA01[50], CidadeB01[50];
+    int PopulacaoA01, PopulacaoB01;
+    float AreaA01, AreaB01;
+    float PIBA01,PIBB01;
+    int PontosTuristicosA01, PontosturisticosB01;
+    float PIBPercapitaA01, PIBPercapitaB01;
+    float DensidadePopulacionalA01, DensidadePopulacionalB01;
+    int pontosA = 0, pontosB = 0; // Contadores de pontos 
 
     printf("Cadastro de cartas\n");
 
@@ -27,35 +29,35 @@ int main() {
     getchar(); // Limpa o buffer antes de ler a string com espaços
 
     printf("Digite o nome da cidade: \n");
-    scanf(" %[^\n]", Cidade); // Corrigido para ler nomes com espaços
+    scanf(" %[^\n]", CidadeA01); // Corrigido para ler nomes com espaços
 
     printf("Digite a população da cidade: \n");
-    scanf("%d", &Populacao);
+    scanf("%d", &PopulacaoA01);
 
     printf("Digite a Área da cidade: \n");
-    scanf("%f", &Area);
+    scanf("%f", &AreaA01);
 
     printf("Digite o PIB da cidade (em bilhões de reais): \n");
-    scanf("%f", &PIB);
+    scanf("%f", &PIBA01);
 
     printf("Digite a quantidade de Pontos Turísticos: \n");
-    scanf("%d", &PontosTuristicos);
+    scanf("%d", &PontosTuristicosA01);
 
-    PIBPercapita = PIB *1000 / Populacao;
+    PIBPercapitaA01 = PIBA01 *1000 / PopulacaoA01;
 
-    DensidadePopulacional = Populacao / Area;
+    DensidadePopulacionalA01 = PopulacaoA01 / AreaA01;
 
     printf("\n----- Dados da Carta -----\n");
     printf("Código: %s\n", Codigo);
-    printf("Cidade: %s\n", Cidade);
-    printf("População: %d habitantes\n", Populacao);
-    printf("Área: %.2f km²\n", Area);
-    printf("PIB: %.2f bilhões de Reais\n", PIB);
-    printf("Pontos Turísticos: %d\n", PontosTuristicos);
-    printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapita);
-    printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacional);
+    printf("Cidade: %s\n", CidadeA01);
+    printf("População: %d habitantes\n", PopulacaoA01);
+    printf("Área: %.2f km²\n", AreaA01);
+    printf("PIB: %.2f bilhões de Reais\n", PIBA01);
+    printf("Pontos Turísticos: %d\n", PontosTuristicosA01);
+    printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapitaA01);
+    printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacionalA01);
 
-    printf("Estado A \n");
+    printf("Estado B \n");
 
     printf("Digite o código da cidade: \n");
     scanf("%s", Codigo);
@@ -63,252 +65,124 @@ int main() {
     getchar(); // Limpa o buffer antes de ler a string com espaços
 
     printf("Digite o nome da cidade: \n");
-    scanf(" %[^\n]", Cidade); // Corrigido para ler nomes com espaços
+    scanf(" %[^\n]", CidadeB01); // Corrigido para ler nomes com espaços
 
     printf("Digite a população da cidade: \n");
-    scanf("%d", &Populacao);
+    scanf("%d", &PopulacaoB01);
 
     printf("Digite a Área da cidade: \n");
-    scanf("%f", &Area);
+    scanf("%f", &AreaB01);
 
     printf("Digite o PIB da cidade (em bilhões de reais): \n");
-    scanf("%f", &PIB);
+    scanf("%f", &PIBB01);
 
     printf("Digite a quantidade de Pontos Turísticos: \n");
-    scanf("%d", &PontosTuristicos);
+    scanf("%d", &PontosturisticosB01);
 
-    PIBPercapita = PIB *1000 / Populacao;
+    PIBPercapitaB01 = PIBB01 *1000 / PopulacaoB01;
 
-    DensidadePopulacional = Populacao / Area;
+    DensidadePopulacionalB01 = PopulacaoB01 / AreaB01;
 
     printf("\n----- Dados da Carta -----\n");
     printf("Código: %s\n", Codigo);
-    printf("Cidade: %s\n", Cidade);
-    printf("População: %d habitantes\n", Populacao);
-    printf("Área: %.2f km²\n", Area);
-    printf("PIB: %.2f bilhões de Reais\n", PIB);
-    printf("Pontos Turísticos: %d\n", PontosTuristicos);
-    printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapita);
-    printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacional);
-
-    printf("Estado A \n");
-
-    printf("Digite o código da cidade: \n");
-    scanf("%s", Codigo);
-
-    getchar(); // Limpa o buffer antes de ler a string com espaços
-
-    printf("Digite o nome da cidade: \n");
-    scanf(" %[^\n]", Cidade); // Corrigido para ler nomes com espaços
-
-    printf("Digite a população da cidade: \n");
-    scanf("%d", &Populacao);
-
-    printf("Digite a Área da cidade: \n");
-    scanf("%f", &Area);
-
-    printf("Digite o PIB da cidade (em bilhões de reais): \n");
-    scanf("%f", &PIB);
-
-    printf("Digite a quantidade de Pontos Turísticos: \n");
-    scanf("%d", &PontosTuristicos);
-
-    PIBPercapita = PIB *1000 / Populacao;
-
-    DensidadePopulacional = Populacao / Area;
-
-    printf("\n----- Dados da Carta -----\n");
-    printf("Código: %s\n", Codigo);
-    printf("Cidade: %s\n", Cidade);
-    printf("População: %d habitantes\n", Populacao);
-    printf("Área: %.2f km²\n", Area);
-    printf("PIB: %.2f bilhões de Reais\n", PIB);
-    printf("Pontos Turísticos: %d\n", PontosTuristicos);
-    printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapita);
-    printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacional);
-
-    printf("Estado A \n");
-
-    printf("Digite o código da cidade: \n");
-    scanf("%s", Codigo);
-
-    getchar(); // Limpa o buffer antes de ler a string com espaços
-
-    printf("Digite o nome da cidade: \n");
-    scanf(" %[^\n]", Cidade); // Corrigido para ler nomes com espaços
-
-    printf("Digite a população da cidade: \n");
-    scanf("%d", &Populacao);
-
-    printf("Digite a Área da cidade: \n");
-    scanf("%f", &Area);
-
-    printf("Digite o PIB da cidade (em bilhões de reais): \n");
-    scanf("%f", &PIB);
-
-    printf("Digite a quantidade de Pontos Turísticos: \n");
-    scanf("%d", &PontosTuristicos);
-
-    PIBPercapita = PIB *1000 / Populacao;
-
-    DensidadePopulacional = Populacao / Area;
-
-    printf("\n----- Dados da Carta -----\n");
-    printf("Código: %s\n", Codigo);
-    printf("Cidade: %s\n", Cidade);
-    printf("População: %d habitantes\n", Populacao);
-    printf("Área: %.2f km²\n", Area);
-    printf("PIB: %.2f bilhões de Reais\n", PIB);
-    printf("Pontos Turísticos: %d\n", PontosTuristicos);
-    printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapita);
-    printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacional);
-
-    printf("Estado A \n");
-
-    printf("Digite o código da cidade: \n");
-    scanf("%s", Codigo);
-
-    getchar(); // Limpa o buffer antes de ler a string com espaços
-
-    printf("Digite o nome da cidade: \n");
-    scanf(" %[^\n]", Cidade); // Corrigido para ler nomes com espaços
-
-    printf("Digite a população da cidade: \n");
-    scanf("%d", &Populacao);
-
-    printf("Digite a Área da cidade: \n");
-    scanf("%f", &Area);
-
-    printf("Digite o PIB da cidade (em bilhões de reais): \n");
-    scanf("%f", &PIB);
-
-    printf("Digite a quantidade de Pontos Turísticos: \n");
-    scanf("%d", &PontosTuristicos);
-
-    PIBPercapita = PIB *1000 / Populacao;
-
-    DensidadePopulacional = Populacao / Area;
-
-    printf("\n----- Dados da Carta -----\n");
-    printf("Código: %s\n", Codigo);
-    printf("Cidade: %s\n", Cidade);
-    printf("População: %d habitantes\n", Populacao);
-    printf("Área: %.2f km²\n", Area);
-    printf("PIB: %.2f bilhões de Reais\n", PIB);
-    printf("Pontos Turísticos: %d\n", PontosTuristicos);
-    printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapita);
-    printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacional);
-
-    printf("Estado A \n");
-
-    printf("Digite o código da cidade: \n");
-    scanf("%s", Codigo);
-
-    getchar(); // Limpa o buffer antes de ler a string com espaços
-
-    printf("Digite o nome da cidade: \n");
-    scanf(" %[^\n]", Cidade); // Corrigido para ler nomes com espaços
-
-    printf("Digite a população da cidade: \n");
-    scanf("%d", &Populacao);
-
-    printf("Digite a Área da cidade: \n");
-    scanf("%f", &Area);
-
-    printf("Digite o PIB da cidade (em bilhões de reais): \n");
-    scanf("%f", &PIB);
-
-    printf("Digite a quantidade de Pontos Turísticos: \n");
-    scanf("%d", &PontosTuristicos);
-
-    PIBPercapita = PIB *1000 / Populacao;
-
-    DensidadePopulacional = Populacao / Area;
-
-    printf("\n----- Dados da Carta -----\n");
-    printf("Código: %s\n", Codigo);
-    printf("Cidade: %s\n", Cidade);
-    printf("População: %d habitantes\n", Populacao);
-    printf("Área: %.2f km²\n", Area);
-    printf("PIB: %.2f bilhões de Reais\n", PIB);
-    printf("Pontos Turísticos: %d\n", PontosTuristicos);
-    printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapita);
-    printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacional);
-
-    printf("Estado A \n");
-
-    printf("Digite o código da cidade: \n");
-    scanf("%s", Codigo);
-
-    getchar(); // Limpa o buffer antes de ler a string com espaços
-
-    printf("Digite o nome da cidade: \n");
-    scanf(" %[^\n]", Cidade); // Corrigido para ler nomes com espaços
-
-    printf("Digite a população da cidade: \n");
-    scanf("%d", &Populacao);
-
-    printf("Digite a Área da cidade: \n");
-    scanf("%f", &Area);
-
-    printf("Digite o PIB da cidade (em bilhões de reais): \n");
-    scanf("%f", &PIB);
-
-    printf("Digite a quantidade de Pontos Turísticos: \n");
-    scanf("%d", &PontosTuristicos);
-
-    PIBPercapita = PIB *1000 / Populacao;
-
-    DensidadePopulacional = Populacao / Area;
-
-    printf("\n----- Dados da Carta -----\n");
-    printf("Código: %s\n", Codigo);
-    printf("Cidade: %s\n", Cidade);
-    printf("População: %d habitantes\n", Populacao);
-    printf("Área: %.2f km²\n", Area);
-    printf("PIB: %.2f bilhões de Reais\n", PIB);
-    printf("Pontos Turísticos: %d\n", PontosTuristicos);
-    printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapita);
-    printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacional);
-
-    printf("Estado A \n");
-
-    printf("Digite o código da cidade: \n");
-    scanf("%s", Codigo);
-
-    getchar(); // Limpa o buffer antes de ler a string com espaços
-
-    printf("Digite o nome da cidade: \n");
-    scanf(" %[^\n]", Cidade); // Corrigido para ler nomes com espaços
-
-    printf("Digite a população da cidade: \n");
-    scanf("%d", &Populacao);
-
-    printf("Digite a Área da cidade: \n");
-    scanf("%f", &Area);
-
-    printf("Digite o PIB da cidade (em bilhões de reais): \n");
-    scanf("%f", &PIB);
-
-    printf("Digite a quantidade de Pontos Turísticos: \n");
-    scanf("%d", &PontosTuristicos);
-
-    PIBPercapita = PIB *1000 / Populacao;
-
-    DensidadePopulacional = Populacao / Area;
-
-    printf("\n----- Dados da Carta -----\n");
-    printf("Código: %s\n", Codigo);
-    printf("Cidade: %s\n", Cidade);
-    printf("População: %d habitantes\n", Populacao);
-    printf("Área: %.2f km²\n", Area);
-    printf("PIB: %.2f bilhões de Reais\n", PIB);
-    printf("Pontos Turísticos: %d\n", PontosTuristicos);
-    printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapita);
-    printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacional);
-
-    
-
+    printf("Cidade: %s\n", CidadeB01);
+    printf("População: %d habitantes\n", PopulacaoB01);
+    printf("Área: %.2f km²\n", AreaB01);
+    printf("PIB: %.2f bilhões de Reais\n", PIBB01);
+    printf("Pontos Turísticos: %d\n", PontosturisticosB01);
+    printf("PIB per capita: R$ %.2f por habitante\n", PIBPercapitaB01);
+    printf("Densidade populacional: %.2f habitantes/km²\n", DensidadePopulacionalB01);
+
+    // Comparação das cartas
+    printf("\n----- Comparação -----\n");
+
+    //População
+    if (PopulacaoA01 > PopulacaoB01){
+        printf("Maior População: %s\n", CidadeA01);
+        pontosA++;
+    }
+    else if (PopulacaoA01 < PopulacaoB01){
+        printf("Maior População: %s\n", CidadeB01);
+        pontosB++;
+    }
+    else {
+        printf("Ambas cidades tem a mesma População\n");
+    }
+
+    //Area
+    if (AreaA01 > AreaB01){
+        printf("Maior Área: %s\n", CidadeA01);
+        pontosA++;
+    }
+    else if (AreaA01 < AreaB01){
+        printf("Maior Área: %s\n", CidadeB01);
+        pontosB++;
+    }
+    else {
+        printf("Ambas cidades tem a mesma Área\n");
+    }
+
+    //PIB
+    if (PIBA01 > PIBB01){
+        printf("Maior PIB: %s\n", CidadeA01);
+        pontosA++;
+    }
+    else if (PIBA01 < PIBB01){
+        printf("Maior PIB: %s\n", CidadeB01);
+        pontosB++;
+    }
+    else {
+        printf("Ambas cidades tem o mesmo PIB\n");
+    }
+
+    //Pontos Turísticos
+    if (PontosTuristicosA01 > PontosturisticosB01){
+        printf("Mais Pontos Túristicos: %s\n", CidadeA01);
+        pontosA++;
+    }
+    else if (PontosTuristicosA01 < PontosturisticosB01){
+        printf("Mais Pontos Túristicos: %s\n", CidadeB01);
+        pontosB++;
+    }
+    else {
+        printf("Ambas cidades tem o mesmo numero de Pontos Turísticos\n");
+    }
+
+    //PIB per capita
+    if (PIBPercapitaA01 > PIBPercapitaB01){
+        printf("Mais PIB per capita: %s\n", CidadeA01);
+        pontosA++;
+    }
+    else if (PIBPercapitaA01 < PIBPercapitaB01){
+        printf("Mais PIB per capita: %s\n", CidadeB01);
+        pontosB++;
+    }
+    else {
+        printf("Ambas cidades tem o mesmo PIB per capita\n");
+    }
+
+    //Densidade Populacional
+    if (DensidadePopulacionalA01 > DensidadePopulacionalB01){
+        printf("Menor Densidade Populacional: %s\n", CidadeB01);
+        pontosA++;
+    }
+    else if (DensidadePopulacionalA01 < DensidadePopulacionalB01){
+        printf("Menor Densidade Populacional: %s\n", CidadeA01);
+        pontosB++;
+    }
+    else {
+        printf("Ambas cidades tem a mesma Densidade Populacional\n");
+    }
+
+    // Exibir a cidade vencedora
+        printf("\n----- Resultado Final -----\n");
+    if (pontosA > pontosB) {
+        printf("A cidade vencedora é: %s com %d pontos!\n", CidadeA01, pontosA);
+    } else if (pontosA < pontosB) {
+        printf("A cidade vencedora é: %s com %d pontos!\n", CidadeB01, pontosB);
+    } else {
+        printf("Empate! Ambas as cidades tiveram %d pontos.\n", pontosA);
+    }
 
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
